@@ -8,6 +8,23 @@ Requirement: Go 1.21+
 go build
 ```
 
+## Usage（例子）（尽量在本地运行，不要在远端）
+#### MacOS、Linux 命令（尽量在本地运行，不要在远端）
+#### 若是提示文件损坏请 执行 sudo xattr -r -d com.apple.quarantine （app地址）
+`-thread 100 #进程数100`
+```bash
+./RealiTLScanner -addr VPSIP -port 443 -thread 100 -timeout 5 -out file.csv
+```
+#### Windows 命令(程序在桌面)（尽量在本地运行，不要在远端）:
+```bash
+cd "%USERPROFILE%\Desktop"
+RealiTLScanner-windows-64.exe -addr VPSIP -port 443 -thread 100 -timeout 5 -out file.csv
+```
+重要提示：
+- RealiTLScanner 尽量在本地运行，不要在远端
+- 多次运行RealiTLScanner时，请更改输出文件名，如：file1.csv、file2.csv、file3.csv 等
+- 如果使用相同的文件名，可能会导致文件导出失败或覆盖之前的扫描结果
+
 ## Usage
 
 It is recommended to run this tool locally, as running the scanner in the cloud may cause the VPS to be flagged.
